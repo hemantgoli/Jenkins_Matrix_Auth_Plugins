@@ -1,0 +1,17 @@
+pipeline{
+	agent any
+	stages{
+		stage('Git checkout'){
+			steps{
+				echo "checkout done"
+			}
+		}
+		stage('Build'){
+			sh '''cd /opt
+			      ls -lrt
+			      df -h
+			      pwd
+			   '''
+			}
+		}
+	}
