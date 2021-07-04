@@ -8,6 +8,7 @@ pipeline{
 		}
 		stage('Build'){
 			steps{
+			echo ${env.NODE_NAME}
 			sh '''cd /opt
 			      ls -lrt
 			      df -h
